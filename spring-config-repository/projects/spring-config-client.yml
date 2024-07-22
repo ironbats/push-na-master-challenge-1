@@ -1,0 +1,9 @@
+# Configurações da aplicação
+logging:
+  level:
+    root: INFO
+    web: INFO
+# My properties
+app:
+  name: spring-config-client
+  version: '1.0.0'

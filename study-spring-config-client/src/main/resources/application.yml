@@ -1,0 +1,11 @@
+# Configurações config server
+spring:
+  application.name: @project.artifactId@
+  main.allow-bean-definition-overriding: true
+  cloud:
+    config:
+      uri: 'http://localhost:8888'
+      label: '${spring.profiles.active}'
+    compatibility-verifier.enabled: false
+  config:
+    import: 'optional:configserver:http://localhost:8888'

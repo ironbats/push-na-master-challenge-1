@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  servlet.context-path: '/'
+
+management:
+  endpoints:
+    web:
+      base-path: '/'
+      exposure.include: '*'
+
+spring.cloud.config.server:
+  git:
+    uri: { urls do repositório }
+    search-paths:
+      - projects
+    ignoreLocalSshSettings: true
+    cloneOnStart: true
+    force-pull: true
+    private-key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      {sua chave aqui}
+      -----END RSA PRIVATE KEY-----
